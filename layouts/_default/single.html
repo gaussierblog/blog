@@ -75,6 +75,10 @@
   <img src="https://media.tenor.com/HHyhcUbFFjIAAAAi/cherry-blossom.gif" alt="Right Deco" class="side-gif right">
 
   <div class="content">
+
+    <p style="margin-top: 3rem; text-align: center;">
+      <a href="{{ "/" | relURL }}">[ HOME ]</a>
+    </p>
     <h1>{{ .Title }}</h1>
     <div class="meta">Published on {{ .Date.Format "2006-01-02" }}</div>
 
@@ -83,7 +87,24 @@
     <p style="margin-top: 3rem; text-align: center;">
       <a href="{{ "/" | relURL }}">← Back to homepage</a>
     </p>
+
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+          this.page.url = '{{ .Permalink }}';
+          this.page.identifier = '{{ .Permalink }}';
+      };
+      
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://gausser.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
   </div>
 
 </body>
+
 </html>

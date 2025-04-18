@@ -1,5 +1,5 @@
 ---
-title: "Why Magnetism Matters in Watchmaking"
+title: "[Hist] Why Magnetism Matters in Watchmaking"
 date: 2025-04-12T21:59:10+03:00
 ---
 
